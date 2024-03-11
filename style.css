@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    align-items: stretch;
+    border: 20px solid whitesmoke;
+    border-radius: 20px;
+}
+
+.calculator .screen{
+    height: 200px;
+    width: 500px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    /*margin: 10px;
+    padding: 10px;*/
+    text-align: right;
+    font-size: 60px;
+}
+
+.pad, .numPad, .opPad, .numPad div, .opPad div{
+    display: flex;
+    flex: 1;
+}
+
+.pad{
+    border-radius: 5px;
+}
+
+.numPad{
+    flex-direction: column;
+}
+
+.opPad div{
+    flex-direction: column;
+}
+
+button{
+    display: flex;
+    flex: 1;
+}
