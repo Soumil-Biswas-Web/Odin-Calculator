@@ -13,16 +13,18 @@ body{
     width: 500px;
     align-items: stretch;
     border: 20px solid whitesmoke;
+    background-color: whitesmoke;
     border-radius: 20px;
 }
 
 .calculator .screen{
-    height: 200px;
-    width: 500px;
+    background-color: white;
+    height: 80px;
+    width: 480px;
     border-radius: 5px;
     border: 1px solid gray;
-    /*margin: 10px;
-    padding: 10px;*/
+    margin-bottom: 10px;
+    padding: 10px;
     text-align: right;
     font-size: 60px;
 }
@@ -47,4 +49,10 @@ body{
 button{
     display: flex;
     flex: 1;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.opPad div button{
+    background-color: rgba(127, 255, 244, 0.1);
 }
