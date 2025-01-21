@@ -1,8 +1,9 @@
 // Driver Code
 const buttons = document.querySelectorAll('button');
-var a = "";
-var b = "";
-var op = "";
+const screen = document.querySelector(".screen");
+let a = "";
+let b = "";
+let op = "";
 
 for (let button of buttons){
     button.addEventListener("click", function(e) {      //calculator logic
@@ -22,14 +23,16 @@ for (let button of buttons){
                 display(a);
             }
             op = i;
-            display(a+" "+i);
+            display(i);
         }
         else if (i == "="){             //dealing with "=" input
             if (b != ""){
                 a = operate(a, b, op);
                 b = "";
+                op = "";
                 //console.log("displaying a from result check")
-                display(a);   
+                display(a);
+                screen.style.direction = "ltr";
             }
         }
         else if (i == "Clear"){         //clear or backspace
@@ -54,11 +57,13 @@ for (let button of buttons){
             a = a + i;
             console.log("a = ", a);
             display(a);
+            screen.style.direction = "rtl";
         }
         else {
             b = b + i;
             console.log("b = ", b);
-            display(a+" "+op+" "+b);
+            display(b);
+            screen.style.direction = "rtl";
         }
     });
 }
@@ -80,7 +85,6 @@ function operate(a, b, si){     //function for arithmetic operation
 }
 
 function display(number){       //function to display output on screen
-    //console.log("sum is = ", number);
-    const screen = document.querySelector(".screen");
+    //console.log("sum is = ", number);    
     screen.textContent = number;
 }

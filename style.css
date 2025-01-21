@@ -10,7 +10,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 500px;
-    width: 500px;
+    width: min(500px, 100vw);
     align-items: stretch;
     border: 20px solid whitesmoke;
     background-color: whitesmoke;
@@ -19,14 +19,21 @@ body{
 
 .calculator .screen{
     background-color: white;
-    height: 80px;
-    width: 480px;
     border-radius: 5px;
     border: 1px solid gray;
     margin-bottom: 10px;
     padding: 10px;
     text-align: right;
     font-size: 60px;
+}
+
+.screen {
+    margin: 10px 0;
+    height: 80px;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    direction: rtl; 
 }
 
 .pad, .numPad, .opPad, .numPad div, .opPad div{
